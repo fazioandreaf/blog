@@ -10,8 +10,8 @@ export const fetchPost = () => {
     // }
 
     return async (dispatch) => {
-        const res = await jsonPlaceholder('/posts');
+        const {data} = await jsonPlaceholder('/posts');
 
-        dispatch({type: 'FETCH_POSTS', payload: res })
+        dispatch({type: 'FETCH_POSTS', payload: data })
     }
 }
